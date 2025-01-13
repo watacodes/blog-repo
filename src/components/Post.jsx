@@ -1,6 +1,7 @@
 import React from "react";
 import CategoryButton from "./CategoryButton";
 import dayjs from "dayjs";
+import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
   const date = dayjs(post.createdAt).format("MM/DD/YYYY");
@@ -18,11 +19,13 @@ const Post = ({ post }) => {
           ))}
         </div>
       </div>
-      <h2 className="text-2xl leading-10 py-4">{post.title}</h2>
-      <div
-        className="overflow-hidden line-clamp-2 w-3/4"
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      />
+      <Link to={`/posts/${post.id}`}>
+        <h2 className="text-2xl leading-10 py-4">{post.title}</h2>
+        <div
+          className="overflow-hidden line-clamp-2 w-3/4"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+      </Link>
     </li>
   );
 };
