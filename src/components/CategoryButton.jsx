@@ -1,7 +1,6 @@
-const CategoryButton = ({ index, category }) => {
+const CategoryButton = ({ category }) => {
   return (
     <button
-      key={index}
       type="button"
       className="px-2 py-1 mx-2 border border-blue-500 rounded-sm text-blue-500 text-sm"
     >
