@@ -1,13 +1,12 @@
-import "./App.css";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import ContactForm from "./pages/contact/ContactForm";
 import Posts from "./pages/posts/Posts";
-import PostDetails from "./pages/posts/[id]/PostDetails";
-import { Routes, Route, Navigate } from "react-router-dom";
+import PostDetails from "./pages/posts/[id]/components/PostDetails";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<Posts />} />
