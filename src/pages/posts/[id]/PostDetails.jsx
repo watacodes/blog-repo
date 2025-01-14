@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import { posts } from "../../data/posts";
+import { posts } from "../../../data/posts";
 import dayjs from "dayjs";
-import CategoryButton from "../../components/CategoryButton";
-import NotFound from "../notfound/NotFound";
+import CategoryButton from "../../../components/CategoryButton";
+import NotFound from "../../notfound/NotFound";
 
 const PostDetails = () => {
   const { id } = useParams();

@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import ContactForm from "./pages/contact/ContactForm";
 import Posts from "./pages/posts/Posts";
-import PostDetails from "./pages/post/PostDetails";
+import PostDetails from "./pages/posts/[id]/PostDetails";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
