@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { PostContext } from "../../context/PostContext";
-import Post from "./components/Post";
+import Post from "./[id]/components/Post";
 import FetchError from "../../components/FetchError";
 
 const Posts = () => {

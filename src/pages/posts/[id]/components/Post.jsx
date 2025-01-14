@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import CategoryButton from "../../../components/CategoryButton";
+import CategoryButton from "../../../../components/CategoryButton";
 import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
