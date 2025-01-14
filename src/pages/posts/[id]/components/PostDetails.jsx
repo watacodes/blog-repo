@@ -2,14 +2,11 @@ import { useParams } from "react-router-dom";
 import dayjs from "dayjs";
 import CategoryButton from "../../../../components/CategoryButton";
 import NotFound from "../../../notfound/NotFound";
-import { useContext } from "react";
-import { PostContext } from "../../../../context/PostContext";
 import Loading from "../../../post/components/Loading";
 import FetchError from "../../../../components/FetchError";
 
-const PostDetails = () => {
+const PostDetails = ({ posts, isLoading, error }) => {
   const { id } = useParams();
-  const { posts, isLoading, error } = useContext(PostContext);
 
   if (error) return <FetchError error={error} />;
 
