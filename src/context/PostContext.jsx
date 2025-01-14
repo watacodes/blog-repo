@@ -11,6 +11,7 @@ const PostProvider = ({ children }) => {
 
   useEffect(() => {
     const fetcher = async () => {
+      isError("");
       setIsLoading(true);
       try {
         const res = await fetch(

@@ -5,10 +5,13 @@ import NotFound from "../notfound/NotFound";
 import { useContext } from "react";
 import { PostContext } from "../../context/PostContext";
 import Loading from "./components/Loading";
+import FetchError from "../../components/FetchError";
 
 const PostDetails = () => {
   const { id } = useParams();
-  const { posts, isLoading } = useContext(PostContext);
+  const { posts, isLoading, error } = useContext(PostContext);
+
+  if (error) return <FetchError error={error} />;
 
   const targetPost = posts.find((post) => post.id.toString() === id);
 
