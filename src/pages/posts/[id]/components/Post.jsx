@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import CategoryButton from "../../../../components/CategoryButton";
-import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
   const date = dayjs(post.createdAt).format("MM/DD/YYYY");

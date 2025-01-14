@@ -1,10 +1,10 @@
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import dayjs from "dayjs";
 import CategoryButton from "../../../../components/CategoryButton";
 import NotFound from "../../../notfound/NotFound";
 import Loading from "../../../post/components/Loading";
 import FetchError from "../../../../components/FetchError";
-import { useState, useEffect } from "react";
 
 const PostDetails = () => {
   const { id } = useParams();
