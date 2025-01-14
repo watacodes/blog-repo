@@ -39,12 +39,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Posts posts={posts} error={error} />} />
-        <Route
-          path="/posts/:id"
-          element={
-            <PostDetails posts={posts} error={error} isLoading={isLoading} />
-          }
-        />
+        <Route path="/posts/:id" element={<PostDetails />} />
         <Route path="/contact" element={<ContactForm />} />
 
         <Route path="*" element={<Navigate to="/" replace />} />
