@@ -55,6 +55,12 @@ const ContactForm = () => {
 
   const onError = (err) => console.error(err);
 
+  const resetFields = () => {
+    resetField("name");
+    resetField("email");
+    resetField("message");
+  };
+
   return (
     <div className="h-screen flex justify-center max-w=[800px] mx-auto py-10">
       <form
@@ -128,12 +134,8 @@ const ContactForm = () => {
           </button>
           <button
             type="button"
-            disabled={!isValid || isSubmitting}
-            onClick={() => {
-              resetField("name");
-              resetField("email");
-              resetField("message");
-            }}
+            disabled={isSubmitting}
+            onClick={resetFields}
             className="bg-gray-200 px-4 py-2 rounded-lg font-bold cursor-pointer"
           >
             クリア
